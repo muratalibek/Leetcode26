@@ -28,10 +28,15 @@
             //        }
             //    }
             //}
-            k = arrayClean.Length;
-            for (int i = 0; i < arrayClean.Length; i++)
+            string[] arrayConverted  = arrayClean.Select(x => x.ToString()).ToArray();
+            for (int i = arrayClean.Length; i < array.Length; i++)
             {
-                Console.Write(arrayClean[i] + " ");
+                arrayConverted[i] = "_";
+            }
+            k = arrayClean.Length;
+            for (int i = 0; i < arrayConverted.Length; i++)
+            {
+                Console.Write(arrayConverted[i] + " ");
             }
             Console.WriteLine();
             Console.ReadKey();
